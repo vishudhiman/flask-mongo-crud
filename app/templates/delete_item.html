@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Delete Item</title>
+</head>
+
+<body>
+    <h1>Delete Item</h1>
+    <p>Are you sure you want to delete "<strong>{{ item.name }}</strong>"?</p>
+
+    <form method="POST" action="/items/{{ item.id }}/delete">
+        <input type="submit" value="Yes, Delete">
+    </form>
+
+    <br>
+    <a href="/">🔙 Cancel</a>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Item List</title>
+</head>
+
+<body>
+    <h1>Item List</h1>
+
+    {% if items %}
+    <ul>
+        {% for item in items %}
+        <li>
+            {{ item.name }} - {{ item.description }}
+            <a href="/items/{{ item.id }}">Edit</a> |
+            <a href="/items/{{ item.id }}/delete">Delete</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No items available.</p>
+    {% endif %}
+
+    <br>
+    <a href="/items">➕ Add New Item</a>
+</body>
+
+</html>
